@@ -1,0 +1,24 @@
+{
+  "name": "latest_successful_commit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euronmetaliaj2/latest_successful_commit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euronmetaliaj2/latest_successful_commit/issues"
+  },
+  "homepage": "https://github.com/euronmetaliaj2/latest_successful_commit#readme",
+  "description": "",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "axios": "^0.26.1"
+  }
+}

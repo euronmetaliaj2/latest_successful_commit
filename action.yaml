@@ -1,0 +1,19 @@
+name: 'Last Successful Commit'
+author: 'Euron & Oltisa'
+description: 'Get the last successful commit!'
+inputs:
+  github_token: # Github Secret  Token
+    description: 'Token'
+    required: true
+  workflow_id: # Workflow Id
+    description: 'Workflow Id'
+    required: true
+  branch: # branch
+    description: 'Branch'
+    required: true
+outputs:
+  commit_hash: # hash of the last successful workflow run
+    description: 'Last successful commit'
+runs:
+  using: 'node12' #currently only supports docker or node12
+  main: 'index.js'
