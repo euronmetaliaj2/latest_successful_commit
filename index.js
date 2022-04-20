@@ -5,9 +5,9 @@ try {
 
     process.stdout.write(" GITHUB TOKEN:" + core.getInput('github_token'));
     process.stdout.write(" REPO:" + process.env.GITHUB_REPOSITORY);
-    process.stdout.write(" ACTIONS :" + octokit.actions + "\n DONE");
-
     const octokit = github.getOctokit(core.getInput('github_token'));
+
+    process.stdout.write(" ACTIONS :" + octokit.actions + "\n DONE");
 
     octokit.actions.listWorkflowRuns({
         owner: process.env.GITHUB_REPOSITORY.split('/')[0],
