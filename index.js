@@ -3,13 +3,14 @@ const github = require('@actions/github');
 
 try {
 
-    process.stdout.write(" GITHUB TOKEN:" + core.getInput('github_token'));
-    process.stdout.write(" REPO:" + process.env.GITHUB_REPOSITORY);
+    // process.stdout.write(" GITHUB TOKEN:" + core.getInput('github_token'));
+    // process.stdout.write(" REPO:" + process.env.GITHUB_REPOSITORY);
     const octokit = github.getOctokit(core.getInput('github_token'));
 
-    process.stdout.write(" ACTIONS :" + octokit.actions + "\n DONE");
 
-    octokit.actions.listWorkflowRuns({
+    process.stdout.write(" ACTIONS :" + octokit.actions + "\n DONE").rest;
+
+    octokit.rest.actions.listWorkflowRuns({
         owner: process.env.GITHUB_REPOSITORY.split('/')[0],
         repo: process.env.GITHUB_REPOSITORY.split('/')[1],
         workflow_id: core.getInput('workflow_id'),
